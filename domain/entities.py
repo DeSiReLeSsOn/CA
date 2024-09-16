@@ -22,9 +22,9 @@ class CourseDM:
 
 @dataclass(slots=True)
 class ModuleDM:
+    module_id: str 
     module_name: str 
     module_desc: str 
-    module_id: str 
     course_id: str
 
 
@@ -32,9 +32,8 @@ class ModuleDM:
 
 @dataclass(slots=True)
 class LessonDM:
+    lesson_id: str 
     lesson_name: str 
     lesson_desc: str 
     lesson_content: List[str]
-    lesson_module: ModuleDM
-    lesson_id: str 
     module_id: str
