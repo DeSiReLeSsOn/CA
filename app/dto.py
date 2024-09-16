@@ -1,10 +1,10 @@
 from dataclasses import dataclass
-
+from typing import List
+import decimal
 
 
 @dataclass(slots=True)
-class CourseDM:
-    course_id: str
+class CourseDTO:
     course_name: str 
     course_desc: str 
     course_duration: int 
@@ -19,20 +19,16 @@ class CourseDM:
 
 
 @dataclass(slots=True)
-class ModuleDM:
+class ModuleDTO:
     module_name: str 
     module_desc: str 
-    module_id: str 
-    course_id: str
+
 
 
      
 
 @dataclass(slots=True)
-class LessonDM:
+class LessonDTO:
     lesson_name: str 
     lesson_desc: str 
     lesson_content: List[str]
-    lesson_module: ModuleDM
-    lesson_id: str 
-    module_id: str
